@@ -20,6 +20,7 @@
     height: 42px;
     position: fixed;
     top: 0;
+    z-index: 3;
 }
 
 #MainBar > div
@@ -28,7 +29,7 @@
     padding: 12px;
 }
 
-#MainBar > div:hover
+#MainBar > div:hover, #SubBar > div:hover
 {
     background-color: rgb(226, 219, 219);
 }
@@ -81,11 +82,6 @@
     width: 150px;
 }
 
-#SubBar > div:hover
-{
-    background-color: rgb(226, 219, 219);
-}
-
 #SubBar a
 {
     font-size: 16px;
@@ -97,6 +93,7 @@
 {
     padding-top: 42px;
     position: relative;
+    z-index: 1;
 }
 
 #Home > img
@@ -108,31 +105,121 @@
 #Home > div
 {
     position: absolute;
-    bottom: 0;
+    bottom: 45px;
+    width: 100%;
+    z-index: 2;
 }
 
-#Home > div > h6
+#Home p
 {
     color: white;
 }
 
-#Home > div > p
+#Home p:first-child
 {
-    color: white;
+    font-size: 20px;
+    padding-bottom: 15px;
 }
 
-/*others*/
+/*the band*/
+#Band
+{
+    padding-top: 75px;
+    padding-bottom: 105px;
+}
 
+#Band > p:first-child
+{
+    font-size: 27px;
+    letter-spacing: 5px;
+}
+
+#Band > p:nth-child(2)
+{
+    color: gray;
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+#Band > p:nth-child(3)
+{
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 14px;
+}
+
+#Band > div
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+#Band > div p
+{
+    padding-top: 70px;
+    padding-bottom: 18px;
+}
+
+#Band img
+{
+    width: 150px;
+    height: auto;
+    border-radius: 4px;
+}
+
+/*tour dates*/
+#Tour
+{
+    background-color: black; 
+    padding-top: 75px;
+    padding-bottom: 105px;
+}
+
+#Tour > p:first-child
+{
+    font-size: 27px;
+    letter-spacing: 5px;
+}
+
+#Tour > p:nth-child(2)
+{
+    color: gray;
+    padding-top: 25px;
+    padding-bottom: 35px;
+}
 
 .Time
 {
-    border: 1px solid gray;
-    padding: 6px 12px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 10px 14px;
     text-align: left;
+    color: gray;
+}
+
+.Time:last-child
+{
+    border-bottom: 1px solid gray;
 }
 
 .SoldOut
 {
     background-color: red;
     color: white;
+    padding: 3px 5px;
+    margin-left: 15px;
+}
+
+.Time:last-child > span
+{
+    background-color: black;
+    color: white;
+    padding: 4px 5px 2px 5px;
+    margin-right: 20px;
+}
+
+#Tour > div:first-child
+{
+    margin-bottom: 20px;
 }
