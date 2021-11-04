@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Band Template</title>
     <link rel="stylesheet" href="BandTemplate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!--tool bar-->
@@ -17,12 +18,12 @@
         <div id="More">
             <a href="">more</a>
             <nav id="SubBar">
-                <div><a href="">Merchandise</a></div>
-                <div><a href="">Extras</a></div>
-                <div><a href="">Media</a></div>
+                <div><a href="#">Merchandise</a></div>
+                <div><a href="#">Extras</a></div>
+                <div><a href="#">Media</a></div>
             </nav>
         </div>
-        <div style="float: right;"><a href="" id="search">search</a></div>
+        <div style="float: right;"><i class="fa fa-search" style="color: white;"></i></div>
     </nav>
     
     <!--home-->
@@ -68,67 +69,86 @@
     <div class="MainPadding" id="Tour">
         <p style="color: white">TOUR DATES</p>
         <p><i>Remember book your tickets!</i></p>
-        <div style="background-color: white;margin-bottom: 20px;">
+        <div>
             <p class="Time">September <span class="SoldOut">Sold out</span></p>
             <p class="Time">October <span class="SoldOut">Sold out</span></p>
             <p class="Time">November <span >3</span></p>
         </div>
-        <div style="display: grid;grid-template-columns: auto auto auto;">
-            <div style="background-color: white;">
-                <img src="Image/image5.png" alt="" style="width: 100px;height: auto;">
-                <p style="background-color: white; text-align: left;"><b>New York</b></p>
-                <p style="background-color: white; text-align: left;">Fri 27 Nov 2016</p>
-                <p style="background-color: white; text-align: left;">
-                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-                </p>
-                <button>Buy Tickets</button>
+        <div>
+            <div>
+                <img src="Image/image5.png" alt="">
+                <div class="City">
+                    <p><b>New York</b></p>
+                    <p>Fri 27 Nov 2016</p>
+                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                    <button>Buy Tickets</button>
+                </div>
             </div>
-            <div style="background-color: white;">
-                <img src="Image/image5.png" alt="" style="width: 100px;height: auto;">
-                <p style="background-color: white; text-align: left;"><b>Paris</b></p>
-                <p style="background-color: white; text-align: left;">Sat 28 Nov 2016</p>
-                <p style="background-color: white; text-align: left;">
-                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-                </p>
-                <button>Buy Tickets</button>
+            <div>
+                <img src="Image/image6.png" alt="">
+                <div class="City">
+                    <p><b>Paris</b></p>
+                    <p>Sat 28 Nov 2016</p>
+                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                    <button>Buy Tickets</button>
+                </div>
             </div>
-            <div style="background-color: white;">
-                <img src="Image/image5.png" alt="" style="width: 100px;height: auto;">
-                <p style="background-color: white; text-align: left;"><b>San Francisco</b></p>
-                <p style="background-color: white; text-align: left;">Sun 29 Nov 2016</p>
-                <p style="background-color: white; text-align: left;">
-                    Praesent tincidunt sed tellus ut rutrum sed vitae justo.
-                </p>
-                <button>Buy Tickets</button>
+            <div>
+                <img src="Image/image7.png" alt="">
+                <div class="City">
+                    <p><b>San Francisco</b></p>
+                    <p>Sun 29 Nov 2016</p>
+                    <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
+                    <button>Buy Tickets</button>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <!--tickets-->
+    <div style="width: 900px;border: 1px solid red;" id="Tickets">
+        <div style="height: 100px;background-color: darkcyan;">
+            <div><p>x</p></div>
+            <p style="clear: both;color: white;">Tickets</p>
+        </div>
+        <div style="height: 100px; background-color: white;">
+adasdasf
         </div>
     </div>
 
     <!--contact-->
     <div class="MainPadding" id="Contact">
-        <h1>CONTACT</h1>
+        <p>CONTACT</p>
         <p><i>Fan? Drop a note!</i></p>
         <div>
             <div style="float: left; text-align: left;">
-                <p><i></i>Chicago, US</p>
-                <p><i></i>Phone: +00 151515</p>
-                <p><i></i>Email: mail@mail.com</p>
+                <p><i class="fa fa-map-marker"></i>Chicago, US</p>
+                <p><i class="fa fa-phone"></i>Phone: +00 151515</p>
+                <p><i class="fa fa-envelope"></i>Email: mail@mail.com</p>
             </div>
-            <form action="" style="float: right;">
-                <input type="text" placeholder="Name">
-                <input type="text" placeholder="Email">
-                <input type="text" placeholder="Message">
-                <input type="submit" value="SEND">
+            <form action="" style="float: right; width: 380px; text-align: right;">
+                <div>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Email">
+                </div>
+                <input type="text" placeholder="Message"><br>
+                <button type="submit">SEND</button>
             </form>
-            <div style="float: none;"></div>
         </div>
     </div>
     
-    <img src="Image/image8.png" alt="" style="width: 100%; height: auto">
+    <img src="Image/image8.png" alt="">
 
     <footer>
-        <div><i>facebook </i><i>Ins </i><i>Snap </i><i>print </i><i>Wti </i><i>lin</i></div>
-        <div>Powered by <a href="">w3.css</a></div>
+        <div>
+            <i style="font-size: 25px;" class="fa fa-facebook-official"></i>
+            <i style="font-size: 25px;" class="fa fa-instagram"></i>
+            <i style="font-size: 25px;" class="fa fa-snapchat"></i>
+            <i style="font-size: 25px;" class="fa fa-pinterest-p"></i>
+            <i style="font-size: 25px;" class="fa fa-twitter"></i>
+            <i style="font-size: 25px;" class="fa fa-linkedin"></i>
+        </div>
+        <div>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></div>
     </footer>
     
     <script src="BandTemplate.js"></script>
