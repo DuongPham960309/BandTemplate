@@ -7,6 +7,14 @@
     box-sizing: border-box;
 }
 
+img
+{
+    width: 100%;
+    height: auto;
+}
+
+
+
 #Band
 {
     padding-top: 75px;
@@ -21,11 +29,7 @@
     padding-right: 300px;
 }
 
-img
-{
-    width: 100%;
-    height: auto;
-}
+
 
 #MainBar > div:hover, #SubBar > div:hover
 {
