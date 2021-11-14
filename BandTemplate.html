@@ -11,19 +11,19 @@
 <body>
     <!--tool bar-->
     <nav id="MainBar">
-        <div><a href="#Home">home</a></div>
-        <div><a href="#Band">band</a></div>
-        <div><a href="#Tour">tour</a></div>
-        <div><a href="#Contact">contact</a></div>
-        <div id="More">
-            <a href="">more</a>
-            <nav id="SubBar">
-                <div><a href="#">Merchandise</a></div>
-                <div><a href="#">Extras</a></div>
-                <div><a href="#">Media</a></div>
+        <a href="#Home" class="LMItem GHovered">home</a>
+        <a href="#Band" class="LMItem GHovered">band</a>
+        <a href="#Tour" class="LMItem GHovered">tour</a>
+        <a href="#Contact" class="LMItem GHovered">contact</a>
+        <div class="More">
+            <a href="" class="LMItem GHovered">more</a>
+            <nav class="SubBar">
+                <a href="#" class="SItem GHovered">Merchandise</a>
+                <a href="#" class="SItem GHovered">Extras</a>
+                <a href="#" class="SItem GHovered">Media</a>
             </nav>
         </div>
-        <div style="float: right;"><i class="fa fa-search" style="color: white;"></i></div>
+        <i class="fa fa-search RMItem"></i>
     </nav>
     
     <!--home-->
@@ -37,8 +37,8 @@
     
     <!--the band-->
     <div class="MainPadding" id="Band">
-        <p>THE BAND</p>
-        <p><i>We love music</i></p>
+        <p class="Header">THE BAND</p>
+        <p class="Line2"><i>We love music</i></p>
         <p>
             We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
@@ -49,7 +49,7 @@
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
             commodo consequat.
         </p>
-        <div>
+        <div class="Gird3">
             <div>
                 <p>Name</p>
                 <img src="Image/image4.png" alt="">
@@ -67,66 +67,69 @@
 
     <!--tour dates-->
     <div class="MainPadding" id="Tour">
-        <p style="color: white">TOUR DATES</p>
-        <p><i>Remember book your tickets!</i></p>
+        <p style="color: white" class="Header">TOUR DATES</p>
+        <p class="Line2"><i>Remember book your tickets!</i></p>
         <div>
             <p class="Time">September <span class="SoldOut">Sold out</span></p>
             <p class="Time">October <span class="SoldOut">Sold out</span></p>
             <p class="Time">November <span >3</span></p>
         </div>
-        <div>
+        <div class="Gird3">
             <div>
                 <img src="Image/image5.png" alt="">
                 <div class="City">
                     <p><b>New York</b></p>
-                    <p>Fri 27 Nov 2016</p>
+                    <p class="Line2">Fri 27 Nov 2016</p>
                     <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button>Buy Tickets</button>
+                    <button onclick="ShowTickets()" class="BBtn">Buy Tickets</button>
                 </div>
             </div>
             <div>
                 <img src="Image/image6.png" alt="">
                 <div class="City">
                     <p><b>Paris</b></p>
-                    <p>Sat 28 Nov 2016</p>
+                    <p class="Line2">Sat 28 Nov 2016</p>
                     <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button>Buy Tickets</button>
+                    <button onclick="ShowTickets()" class="BBtn">Buy Tickets</button>
                 </div>
             </div>
             <div>
                 <img src="Image/image7.png" alt="">
                 <div class="City">
                     <p><b>San Francisco</b></p>
-                    <p>Sun 29 Nov 2016</p>
+                    <p class="Line2">Sun 29 Nov 2016</p>
                     <p>Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                    <button>Buy Tickets</button>
+                    <button onclick="ShowTickets()" class="BBtn">Buy Tickets</button>
                 </div>
             </div>
         </div>
     </div>
 
     <!--tickets-->
-    <div style="width: 900px;border: 1px solid red;" id="Tickets">
-        <div style="background-color: darkcyan;">
-            <div><p>x</p></div>
-            <p><i class="fa fa-suitcase"></i>Tickets</p>
-        </div>
-        <div style="background-color: white;padding: 0px 16px 10px;">
-            <form action="" style="text-align: left;">
-                <p for="" style="padding: 20px 0px 19px;"><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</p>
-                <input type="text" placeholder="How many?">
-                <p for="" style="padding: 20px 0px 19px;"><i class="fa fa-user"></i> Send To</p>
-                <input type="text" placeholder="Enter email">
-                <button style="width: 100%;background-color: darkcyan;">PAY<i class="fa fa-check"></i></button>
-            </form>
-            <button style="background-color: red;">Close <i class="fa fa-times"></i></button>
+    <div style="position: fixed;top: 0;left: 0;z-index: 4;width: 100%;text-align: center;">
+        <div style="width: 900px;border: 1px solid red;" id="Tickets">
+            <div class="DCBackground">
+                <div><p onclick="HideTickets()" class="GHovered">x</p></div>
+                <p class="Header"><i class="fa fa-suitcase"></i>Tickets</p>
+            </div>
+            <div style="background-color: white;padding: 0px 16px 10px;">
+                <form action="" style="text-align: left;">
+                    <p style="padding: 10px 0px 10px; text-align: left;"><i class="fa fa-shopping-cart"></i> Tickets, $15 per person</p>
+                    <input type="text" placeholder="How many?">
+                    <p style="padding: 10px 0px 10px; text-align: left;"><i class="fa fa-user"></i> Send To</p>
+                    <input type="text" placeholder="Enter email">
+                    <button style="width: 100%;" class="DCBtn">PAY<i class="fa fa-check"></i></button>
+                </form>
+                <button onclick="HideTickets()" class="RBtn">Close <i class="fa fa-times"></i></button>
+            </div>
         </div>
     </div>
-
+    
+    
     <!--contact-->
     <div class="MainPadding" id="Contact">
-        <p>CONTACT</p>
-        <p><i>Fan? Drop a note!</i></p>
+        <p class="Header">CONTACT</p>
+        <p class="Line2"><i>Fan? Drop a note!</i></p>
         <div>
             <div style="float: left; text-align: left;">
                 <p><i class="fa fa-map-marker"></i>Chicago, US</p>
@@ -139,7 +142,7 @@
                     <input type="text" placeholder="Email">
                 </div>
                 <input type="text" placeholder="Message"><br>
-                <button type="submit">SEND</button>
+                <button type="submit" class="BBtn">SEND</button>
             </form>
         </div>
     </div>
@@ -155,7 +158,10 @@
             <i style="font-size: 25px;" class="fa fa-twitter"></i>
             <i style="font-size: 25px;" class="fa fa-linkedin"></i>
         </div>
-        <div>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></div>
+        <div class="Line2">
+            Powered by
+            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="Line2">w3.css</a>
+        </div>
     </footer>
     
     <script src="BandTemplate.js"></script>

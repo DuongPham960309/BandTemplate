@@ -28,4 +28,14 @@ function HomeLoop()
     }
 }
 
+function ShowTickets()
+{
+    document.getElementById("Tickets").style.display = "block";
+}
+
+function HideTickets()
+{
+    document.getElementById("Tickets").style.display = "none";
+}
+
 setInterval(HomeLoop, 3000);
